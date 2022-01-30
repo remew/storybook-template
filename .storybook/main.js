@@ -10,5 +10,11 @@ module.exports = {
   "framework": "@storybook/react",
   "core": {
     "builder": "storybook-builder-vite"
-  }
+  },
+  async viteFinal(config, { configType }) {
+    return {
+      ...config,
+      base: './',
+    };
+  },
 }
